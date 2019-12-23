@@ -40,7 +40,7 @@ taskApp.factory('stateService', function($http) {
     var year  = d.slice(0,4)
     var month = d.slice(4,6)
     var day   = d.slice(6,8)
-    var date = new Date(Date.UTC(year, month, day))
+    var date = new Date(Date.UTC(year, month-1, day))
     return date.toLocaleDateString('de-DE');
   }
 
