@@ -1,0 +1,378 @@
+* {
+  font-family: Sans-Serif;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+.group:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.task {
+  background: #333;
+  width: 100%;
+  padding: 0.7em 0;
+  min-height: 2.9em;
+  color: #ccc;
+  font-size: 1.7em;
+}
+
+.task div > span {
+  padding: 0 0.7em;
+  display: block;
+  float: left;
+  clear: left;
+}
+
+.task div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.summary {
+  width: 78%;
+  margin-left: 1em;
+}
+
+.due {
+  left: 0.25em;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 3;
+}
+
+.due, .recur {
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 2em;
+  background: #333;
+  max-width: 20%;
+  position: relative;
+  border: 0.2em solid #ccc;
+  border-radius: 1.5em;
+}
+
+.due p {
+  margin: 0;
+  padding: 0;
+  text-indent: none;
+  position: relative;
+  top: 0.1em;
+  font-weight: 800;
+}
+
+.recur {
+  margin: 0 -1em;
+  left: -0.45em;
+  top: -0.15em;
+  font-size: 1.5em;
+}
+
+.annotated p{
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+}
+
+.row, .col {
+  overflow: hidden;
+  position: absolute;
+}
+
+.row {
+  left: 0;
+  right: 0;
+}
+
+.col {
+  top: 0;
+  bottom: 0;
+}
+
+.scroll-x {
+  overflow-x: auto;
+}
+
+.scroll-y {
+  overflow-y: auto;
+}
+
+.list-view {
+  width: 35em;
+  top: 3em;
+  bottom: 0em;
+  background: #333;
+}
+
+.header {
+  top: 0;
+  height: 3em;
+  margin: 0;
+}
+
+.header > a {
+  margin: 0;
+  display: inline-block;
+  color: #aaa;
+  font-size: 2em;
+  padding: 0.3em 0.2em;
+  background: #fff;
+}
+
+.header .tab {
+  background: #111;
+}
+
+.header .active {
+  background: #333;
+}
+
+.header img {
+  height: 1em;
+}
+
+.button {
+  text-align: center;
+}
+
+.credit {
+  float: right;
+  margin: 0.5em;
+}
+
+.H * {
+  color: red;
+  border-color: red;
+}
+
+.M * {
+  color: green;
+  border-color: green;
+}
+
+.L * {
+  color: blue;
+  border-color: blue;
+}
+
+.tag {
+  font-size: 0.8em;
+  margin-right: 0.5em;
+}
+
+.tag:before {
+  background-image: url(/images/tag.svg);
+  background-size: 0.7em 0.7em;
+  display: inline-block;
+  background-repeat: no-repeat;
+  padding: 0.1em;
+  height: 0.7em;
+  width: 0.8em;
+  position: relative;
+  top: 0.25em;
+  content: ' ';
+}
+
+.project {
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 100;
+  margin-right: 0.75em;
+  margin-bottom: 0.2em;
+}
+
+.active {
+  background: #222
+}
+
+.task-detail {
+  font-size: 2em;
+  left: 17.5em;
+  right: 0;
+  top: 1.5em;
+}
+
+.task-detail .tag-list {
+  text-align: center;
+  float: right;
+}
+
+.task-detail .tag {
+  font-size: 0.9em;
+  font-weight: 100;
+  display: inline-block;
+}
+
+.task-detail .project {
+  font-size: 1.1em;
+  width: 50%;
+  display: block;
+  margin-bottom: 0.75em;
+  float: left;
+}
+
+.task-detail h1 {
+  font-weight: 100;
+  font-size: 1.5em;
+  text-align: center;
+  max-width: 65%;
+  margin: 1em auto;
+}
+
+.task-annotation {
+  background-color:limegreen;
+}
+
+.current-subheading {
+  width: 60%;
+  margin: 0 auto 1em;
+}
+
+table {
+  border-collapse: collapse;
+  max-width: 85%;
+  margin: 1em auto;
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: .75em;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+tr {
+  background: #fff;
+}
+
+tr:nth-child(even) {
+  background: #eee;
+}
+
+td:last-child {
+  font-weight: 100;
+}
+
+ul {
+  display: block;
+  width: 50%;
+  margin: 0.5em auto;
+  list-style: none;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  background: #ccc;
+  padding: .6em;
+  border: 1px solid #999;
+  border-radius: 0.1em;
+  font-size: 0.5em;
+  vertical-align: middle;
+}
+
+#task-annotate {
+  padding: 0.6em 0.6em;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+#task-new form {
+  display: block;
+  padding: 0.5em;
+}
+
+#task-new form > * {
+  display: block;
+  margin:  0.5em auto;
+  font-size: 1em;
+  padding: 0.4em;
+  width: 50%;
+  border-radius: 0.1em;
+  border: 1px solid #999;
+}
+
+#task-new select {
+  border: none;
+  width: 52.4%;
+  border: 1px solid #999;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#task-new .submit {
+  background: #ccc;
+  border: 1px solid #999;
+  border-radius: 0.1em;
+}
+
+.tabular-view {
+  top: 3em;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #333;
+}
+
+.tabular-view th {
+  padding: 0.5em;
+  border-bottom: 1px solid #aaa;
+}
+
+.tabular-view td {
+  font-size: 1.0em;
+  padding: 0.5em;
+}
+
+hr {
+  width: 60%;
+  border: 1px solid #ccc;
+  margin: 0.5em auto 2em;
+}
+
+#task-annotate {
+  display: block;
+  width: 45%;
+  margin: 0 auto;
+}
+
+#task-annotate form > * {
+  border-radius: 0.1em;
+  border: 1px solid #999;
+}
+
+#task-annotate #new-annotation{
+  font-size: 1.2em;
+  padding: 0.4em;
+  float: left;
+  width: 95%;
+}
+
+#task-annotate .submit {
+  float: right;
+  clear: both;
+  font-size: 0.5em;
+  background: #ccc;
+  padding: 0.6em;
+  margin-top: 0.5em;
+}
+
+@media (min-width: 960px) {
+  .task {
+    padding: 0.4em 0;
+    font-size: 1.1em;
+  }
+
+  .due {
+    font-size: 1.6em;
+  }
+}

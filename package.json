@@ -1,0 +1,47 @@
+{
+  "author": "Martin Hohenberg <me@martinhohenberg.de> (https://martinhohenberg.de)",
+  "name": "twwebui",
+  "description": "Responsive web interface to Taskwarrior",
+  "license": "MIT",
+  "keywords": [
+    "responsive",
+    "web",
+    "ui",
+    "Taskwarrior"
+  ],
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mhohenberg/twwebui.git"
+  },
+  "main": "./",
+  "scripts": {
+    "prepublish": "make deploy"
+  },
+  "engines": {
+    "node": ">= v0.10.x"
+  },
+  "dependencies": {
+    "director": ">= 1.2.3",
+    "httpstatuses": ">= 1.0.0",
+    "mime": "*",
+    "promised-io": "*"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "twui": "bin/twui"
+  },
+  "files": [
+    "LICENSE.txt",
+    "Makefile",
+    "README.md",
+    "bin",
+    "lib",
+    "public",
+    "test",
+    "twui.js"
+  ]
+}

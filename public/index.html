@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="taskApp">
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <meta charset="UTF-8">
+  <title>twwebui</title>
+
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/angular-ui-router.min.js"></script>
+  <script type="text/javascript" src="js/taskapp.js"></script>
+
+  <body ng-controller="MainCtrl">
+    <nav class="row header">
+      <a id="refresh-button" class="refresh button" ng-click="refreshTasks()">
+        <img src="images/refresh.svg" alt="refresh button" />
+      </a><a id="undo-button" class="undo button" ng-click="undo()">
+        <img src="images/undo.svg" alt="undo button" />
+      </a><a id="list-tab" class="list tab active" ui-sref="list" />
+        <img src="images/list.svg" alt="list tab" />
+      </a><a id="table-tab" class="table tab" ui-sref="table" />
+        <img src="images/table.svg" alt="table tab" />
+      </a>
+      <span class="credit">A <a href="http://rampantmonkey.com">rampantmonkey</a> creation</span>
+    </nav>
+    <div class="" id="content">
+      <div ui-view></div>
+    </div>
+    <datalist id="projectList"> <option data-ng-repeat="proj in state.projects" value="{{proj}}" /> </datalist>
+  </body>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script type="text/javascript" src="js/task-util.js"></script>
+</html>
