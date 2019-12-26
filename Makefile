@@ -10,7 +10,7 @@ deploy: public/js/jquery-$(JQUERY_VERSION).js public/js/angular.min.js public/js
 clean:
 	rm -rf node_modules
 	rm -rf package-lock.json
-
+	
 public/js/jquery-$(JQUERY_VERSION).js:
 	@mkdir -p public/js
 	curl http://code.jquery.com/jquery-$(JQUERY_VERSION).js > $@
