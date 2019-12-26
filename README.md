@@ -5,7 +5,9 @@ Based on twui by RampantMonkey
 
 ## Installing
 
-    npm install -g twui
+twebui is not currently in the npm repository. The following line is here for posterity and will not work
+
+    npm install -g twwebui
 
 ## Usage
 
