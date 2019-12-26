@@ -38,12 +38,13 @@ The task summary contains six indicators for the following attributes of a task.
 
 ### Setting up the development environment
 
-0. Install node [http://nodejs.org/](http://nodejs.org/)
-1. Clone the repo `git clone https://github.com/rampantmonkey/twui.git`
-2. Move to directory `cd twui`
-3. Download dependencies (angular.js) `make deploy`
-4. Download and install node module dependencies locally `npm install`
-5. Start server `bin/twui`
+0. Install taskwarrior [https://taskwarrior.org](https://taskwarrior.org/download/#download)
+1. Install node [http://nodejs.org/](http://nodejs.org/)
+2. Clone the repo `git clone https://github.com/rampantmonkey/twui.git`
+3. Move to directory `cd twui`
+4. Download dependencies (angular.js) `make deploy`
+5. Download and install node module dependencies locally `npm install`
+6. Start server `bin/twui`
 
 ### Updating to most recent version
 
